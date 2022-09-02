@@ -8,28 +8,28 @@
 </head>
 <body>
     <div>
-        <h1>Cadastro de Programadores</h1>
-        <h2>Preencha a ficha com suas informações</h2>
+        <h1 id="titulo">Cadastro de Programadores</h1>
+        <h2 id="subtitulo">Preencha a ficha com suas informações</h2>
         <br>
     </div>
     <form>
-        <fieldset>
-            <div>
-                <label>Nome</label>
-                <input type="text" name="nome" id="nome">
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required autofocus>
             </div>
-            <div>
-                <label>Sobrenome</label>
-                <input type="text" name="sobrenome" id="sobrenome">
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" readonly>
             </div>
         </fieldset>
-        <div>
-            <label>E-mail</label>
-            <input type="email" name="email" id="email">
+        <div class="campo">
+            <label for="email"><strong>E-mail</strong></label>
+            <input type="email" name="email" id="email" required>
         </div>
 
-        <div>
-            <label>Escolha o Tipo de Tecnologia </label>
+        <div class="campo"> 
+            <label><strong>Escolha o Tipo de Tecnologia</strong> </label>
         
         <label>
             <input type="radio" name="devweb" id="frontend" value="front-end" checked>Front-end
@@ -41,8 +41,8 @@
             <input type="radio" name="devweb" id="fullstack" value="fullstack">fullstack
         </label>
         </div>
-        <div>
-            <label>Senioridade</label>
+        <div class="campo">
+            <label for="senioridade"><strong>Senioridade</strong></label>
             <select id="senioridade">
                 <option selected disabled value="">Selecione</option>
                 <option>Junior</option>
@@ -50,9 +50,9 @@
                 <option>Senior</option>
             </select>
         </div>
-        <fieldset>
-            <div>
-                <label>Selecione as tecnologias que tem conhecimento:</label><br><br>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label><strong>Selecione as tecnologias que tem conhecimento:</strong></label><br><br>
                 <input type="checkbox" name="tecnologia1" id="tecnologia1">
                 <label for="tecnologia1"value="html"> HTML</label>
 
@@ -72,13 +72,13 @@
             </div>
         </fieldset>
 
-        <div>
+        <div class="campo">
             <br>
-            <label>Conte Sobre seus Conhecimentos :</label>
+            <label><strong>Conte Sobre seus Conhecimentos</strong> :</label>
             <textarea name="experiencia" style="width:26em" id="experiencia"  rows="10"></textarea>
         </div>
 
-        <button type="submit">Enviar</button>
+        <button class="botão" type="submit">Enviar</button>
     </form>
 </body>
 </html>
